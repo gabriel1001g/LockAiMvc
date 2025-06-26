@@ -1,0 +1,64 @@
+@model List<LockaiMvc.Models.ObjetoViewModel>
+
+@{
+    ViewData["Title"] = "Lista de Objetos Cadastrados";
+}
+
+<h1>Lista de Objetos</h1>
+<hr />
+
+
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Mensagem"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.First().Id)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Nome)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Descricao)</th>
+            <th>@Html.DisplayNameFor(model => model.First().LocalidadePrimaria)</th>  @* Adicionado com base no seu VM *@
+            <th>@Html.DisplayNameFor(model => model.First().Situacao)</th>           @* Adicionado com base no seu VM *@
+            <th>@Html.DisplayNameFor(model => model.First().DataInclusao)</th>     @* CORRIGIDO AQUI! *@
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.LocalidadePrimaria)</td> 
+                    <td>@Html.DisplayFor(modelItem => item.Situacao)</td>          
+                    <td>@Html.DisplayFor(modelItem => item.DataInclusao)</td>  
+                    <td>
+                        <a asp-action="Detalhes" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detalhes</a> |
+                        <a asp-action="Editar" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Editar</a> |
+                        <a asp-action="Deletar" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Deletar</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7">Nenhum objeto cadastrado encontrado.</td> 
+            </tr>
+        }
+    </tbody>
+</table>

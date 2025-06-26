@@ -1,0 +1,11 @@
+C:\Users\etechas\Desktop\LockAiMvc\publish\LockaiMvc.exe
+C:\Users\etechas\Desktop\LockAiMvc\publish\appsettings.Development.json
+C:\Users\etechas\Desktop\LockAiMvc\publish\appsettings.json
+C:\Users\etechas\Desktop\LockAiMvc\publish\LockaiMvc.dll
+C:\Users\etechas\Desktop\LockAiMvc\publish\LockaiMvc.deps.json
+C:\Users\etechas\Desktop\LockAiMvc\publish\LockaiMvc.runtimeconfig.json
+C:\Users\etechas\Desktop\LockAiMvc\publish\LockaiMvc.pdb
+C:\Users\etechas\Desktop\LockAiMvc\publish\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\etechas\Desktop\LockAiMvc\publish\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\etechas\Desktop\LockAiMvc\publish\Newtonsoft.Json.dll
+C:\Users\etechas\Desktop\LockAiMvc\publish\Newtonsoft.Json.Bson.dll

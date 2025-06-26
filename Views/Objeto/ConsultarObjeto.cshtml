@@ -1,0 +1,69 @@
+@model List<LockaiMvc.Models.ObjetoViewModel>
+
+@{
+    ViewData["Title"] = "Lista de Objetos Cadastrados";
+}
+
+<h1>Lista de Objetos</h1>
+<hr />
+
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Mensagem"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.First().Id)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Nome)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Descricao)</th>
+            <th>@Html.DisplayNameFor(model => model.First().LocalidadePrimaria)</th>  
+            <th>@Html.DisplayNameFor(model => model.First().LocalidadeSecundaria)</th>
+            <th>@Html.DisplayNameFor(model => model.First().LocalidadeTercearia)</th>    
+            <th>@Html.DisplayNameFor(model => model.First().Situacao)</th>
+            <th>@Html.DisplayNameFor(model => model.First().idTipoObjeto)</th>            
+            <th>@Html.DisplayNameFor(model => model.First().DataInclusao)</th>
+            <th>@Html.DisplayNameFor(model => model.First().IdUsuarioInclusao)</th>
+            <th>@Html.DisplayNameFor(model => model.First().DataAtualizacao)</th>
+            <th>@Html.DisplayNameFor(model => model.First().IdUsuarioAtualizacao)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.LocalidadePrimaria)</td>
+                    <td>@Html.DisplayFor(modelItem => item.LocalidadeSecundaria)</td>        
+                    <td>@Html.DisplayFor(modelItem => item.LocalidadeTercearia)</td>  
+                    <td>@Html.DisplayFor(modelItem => item.Situacao)</td> 
+                    <td>@Html.DisplayFor(modelItem => item.idTipoObjeto)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DataInclusao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.IdUsuarioInclusao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DataAtualizacao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.IdUsuarioAtualizacao)</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7">Nenhum objeto cadastrado encontrado.</td> 
+            </tr>
+        }
+    </tbody>
+</table>

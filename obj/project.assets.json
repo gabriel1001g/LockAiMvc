@@ -239,27 +239,28 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 9.0.6"
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 9.0.6",
+      "Newtonsoft.Json >= 13.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel\\.nuget\\packages\\": {},
+    "C:\\Users\\etechas\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Area de trabalho 2\\ETEC ADS\\TCC\\LockaiMvc\\LockaiMvc.csproj",
+      "projectUniqueName": "C:\\Users\\etechas\\Desktop\\LockAiMvc\\LockaiMvc.csproj",
       "projectName": "LockaiMvc",
-      "projectPath": "D:\\Area de trabalho 2\\ETEC ADS\\TCC\\LockaiMvc\\LockaiMvc.csproj",
-      "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-      "outputPath": "D:\\Area de trabalho 2\\ETEC ADS\\TCC\\LockaiMvc\\obj\\",
+      "projectPath": "C:\\Users\\etechas\\Desktop\\LockAiMvc\\LockaiMvc.csproj",
+      "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\etechas\\Desktop\\LockAiMvc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\etechas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -296,6 +297,10 @@
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
             "version": "[9.0.6, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           }
         },
         "imports": [
